@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BlogSphere - Share Your Stories</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===== Navbar ===== -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="nav-logo">📝 Blog<span>Sphere</span></a>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+
+      <div class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+
+        <!-- Shown when logged out -->
+        <div id="navAuthLinks">
+          <a href="login.html">Login</a>
+          <a href="register.html" class="btn btn-primary btn-sm">Sign Up</a>
+        </div>
+
+        <!-- Shown when logged in -->
+        <div id="navUserLinks" class="hidden">
+          <a href="dashboard.html">Dashboard</a>
+          <span class="nav-user-name" id="navUserName"></span>
+          <a href="#" id="logoutBtn" class="btn btn-outline btn-sm">Logout</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <!-- ===== Hero Section ===== -->
+    <section class="hero">
+      <div class="container">
+        <h1>Share Your Stories With The World</h1>
+        <p>A clean, modern platform to write blog posts, engage with readers through comments, and grow your audience.</p>
+        <div class="hero-buttons">
+          <a href="register.html" class="btn btn-primary">Get Started</a>
+          <a href="#latestPosts" class="btn btn-outline">Explore Posts</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Latest Posts Section ===== -->
+    <div class="container" id="latestPosts">
+      <h2 class="section-title">Latest Blog Posts</h2>
+      <div class="posts-grid" id="postsGrid">
+        <p class="loading-text">Loading posts...</p>
+      </div>
+    </div>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer">
+    <div class="container">
+      <span class="footer-logo">BlogSphere</span>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="login.html">Login</a>
+        <a href="register.html">Sign Up</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2026 BlogSphere. All rights reserved.
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
